@@ -1,5 +1,9 @@
 package sprint_1.tasca_2.nivel_1;
 
+import sprint_1.tasca_2.nivel_1.classes.Producto;
+import sprint_1.tasca_2.nivel_1.classes.Venta;
+import sprint_1.tasca_2.nivel_1.excepciones.VentaVacia;
+
 public class MainProductos {
 
     public static void main (String[] args) {
@@ -9,8 +13,8 @@ public class MainProductos {
         Producto p1 = new Producto ("Jugo", 2.50);
         Producto p2 = new Producto ("Galletas", 1.80);
 
-        cesta.agregarProducto(p1); //Debemos comentar esta linea (12)...
-        cesta.agregarProducto(p2); //...y esta linea (13) para que salte el error.
+        cesta.agregarProducto(p1); //Debemos comentar esta linea que agrega el producto (p1)...
+        cesta.agregarProducto(p2); //...y esta linea que agrega el producto (p2) para que salte el error.
 
         try {
             System.out.println("El total de esta venta es: " + cesta.calcularTotal());
@@ -32,7 +36,5 @@ public class MainProductos {
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Tiene que haber al menos 3 elementos en la venta para hacer un descuento");
         }
-
-
     }
 }
